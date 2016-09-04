@@ -1,7 +1,11 @@
-export function setState(state) {
+export function reset(rowN, colN) {
   return {
     type: 'SET_STATE',
-    state
+    state: {
+      rowN: rowN,
+      colN: colN,
+      liveMap: {}
+    }
   };
 }
 
