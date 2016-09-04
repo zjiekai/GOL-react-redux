@@ -7,6 +7,10 @@ body {
   max-width: 675px;
 }
 
+.gol .grid-container .row {
+  font-size: 0;
+}
+
 .gol .grid-container .row>div {
   display: inline-block;
   width: 20px;
@@ -17,4 +21,23 @@ body {
 
 .gol .grid-container .row>div.live {
   background-color: #f67c5f;
+}
+
+.gol .buttons {
+  margin-top: 20px;
+}
+
+.gol .buttons button {
+  background: #8f7a66;
+  color: #f9f6f2;
+  line-height: 32px;
+  padding: 0 15px;
+  margin-right: 20px;
+  border-width: 0;
+  font-size: 18px;
+  outline: none;
+}
+
+.gol .buttons button:active {
+  background: #f2b179;
 }
