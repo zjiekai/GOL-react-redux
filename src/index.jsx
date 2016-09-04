@@ -7,13 +7,7 @@ import {reset} from './action_creators';
 import {AppContainer} from './App';
 
 const store = createStore(reducer);
-store.dispatch(reset(3, 3));
-const state0 = {
-  rowN: 3,
-  colN: 3,
-  liveMap: {}
-};
-//store.dispatch({type: 'SET_STATE', state: state0});
+store.dispatch(reset(20, 20));
 
 ReactDOM.render(
   <Provider store={store}>
