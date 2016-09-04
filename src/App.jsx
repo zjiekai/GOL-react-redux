@@ -2,6 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {reset, next} from './action_creators';
 
+import './App.css';
+
 const App = React.createClass({
   getGrids: function() {
     const {rowN, colN, liveMap} = this.props;
