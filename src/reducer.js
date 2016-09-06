@@ -48,6 +48,7 @@ function next(state) {
   return {
     rowN: state.rowN,
     colN: state.colN,
+    timestamp: state.timestamp,
     liveMap: nextLiveMap
   };
 }
@@ -61,7 +62,7 @@ export const reducer = function(state, action) {
     case 'SET_STATE':
       return action.state;
     case 'NEXT':
-      return next(state);
+      return (state.timestamp === action.timestamp) ? next(state) : state;
   }
 
   return state;

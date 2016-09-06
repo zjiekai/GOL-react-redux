@@ -35,11 +35,12 @@ describe('reducer', () => {
     it('[] => []', () => {
       const state = {
         rowN: 2, colN: 2,
+        timestamp: 1234,
         liveMap: {}
       };
       const action = {
         type: 'NEXT',
-        state
+        timestamp: 1234
       };
       const nextState = reducer(state, action);
       expect(nextState).to.eql(state);
@@ -48,15 +49,17 @@ describe('reducer', () => {
     it('[00] => []', () => {
       const state = {
         rowN: 2, colN: 2,
+        timestamp: 1234,
         liveMap: {0: true}
       };
       const action = {
         type: 'NEXT',
-        state
+        timestamp: 1234
       };
       const nextState = reducer(state, action);
       expect(nextState).to.eql({
         rowN: 2, colN: 2,
+        timestamp: 1234,
         liveMap: {}
       });
     });
@@ -64,15 +67,17 @@ describe('reducer', () => {
     it('[00, 11] => []', () => {
       const state = {
         rowN: 2, colN: 2,
+        timestamp: 1234,
         liveMap: {0: true, 3: true}
       };
       const action = {
         type: 'NEXT',
-        state
+        timestamp: 1234
       };
       const nextState = reducer(state, action);
       expect(nextState).to.eql({
         rowN: 2, colN: 2,
+        timestamp: 1234,
         liveMap: {}
       });
     });
@@ -80,15 +85,17 @@ describe('reducer', () => {
     it('[00, 01, 11] => [00, 01, 10, 11]', () => {
       const state = {
         rowN: 2, colN: 2,
+        timestamp: 1234,
         liveMap: {0: true, 1: true, 3: true}
       };
       const action = {
         type: 'NEXT',
-        state
+        timestamp: 1234
       };
       const nextState = reducer(state, action);
       expect(nextState).to.eql({
         rowN: 2, colN: 2,
+        timestamp: 1234,
         liveMap: {0: true, 1: true, 2: true, 3:true}
       });
     });
