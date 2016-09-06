@@ -15,13 +15,27 @@ export function reset(rowN, colN) {
     state: {
       rowN: rowN,
       colN: colN,
+      timestamp: new Date().getTime(),
       liveMap: genRandomLiveMap(rowN, colN)
     }
   };
 }
 
-export function next() {
+export function resetTimestamp(state, ts) {
   return {
-    type: 'NEXT'
+    type: 'SET_STATE',
+    state: {
+      rowN: state.rowN,
+      colN: state.colN,
+      timestamp: ts,
+      liveMap: state.liveMap
+    }
+  }
+}
+
+export function next(ts) {
+  return {
+    type: 'NEXT',
+    timestamp: ts
   }
 }

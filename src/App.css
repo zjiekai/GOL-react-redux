@@ -23,11 +23,11 @@ body {
   background-color: #f67c5f;
 }
 
-.gol .buttons {
+.gol .inputs {
   margin-top: 20px;
 }
 
-.gol .buttons button {
+.gol .inputs button {
   background: #8f7a66;
   color: #f9f6f2;
   line-height: 32px;
@@ -38,6 +38,6 @@ body {
   outline: none;
 }
 
-.gol .buttons button:active {
+.gol .inputs button:active {
   background: #f2b179;
 }
