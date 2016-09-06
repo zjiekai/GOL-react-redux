@@ -27,6 +27,14 @@ body {
   margin-top: 20px;
 }
 
+.gol .inputs input {
+  line-height: 28px;
+  width: 50px;
+  padding: 0 0 0 20px;
+  margin: 0 20px 0 30px;
+  vertical-align: bottom;
+}
+
 .gol .inputs button {
   background: #8f7a66;
   color: #f9f6f2;
